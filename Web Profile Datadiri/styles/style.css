@@ -17,7 +17,7 @@
 
     --sectionPadding: 6rem 0;
 
-    --itemBorderRadiius: 0.7rem;
+    --itemBorderRadius: 0.7rem;
 }
 
 * {
@@ -31,10 +31,10 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6, strong {
-    color: var(--primaryTextColor):
+    color: var(--primaryTextColor);
 }
 
-p{
+p {
     font-size: 1rem; /* 16 pixel */
     line-height: 1.9rem;
 }
@@ -71,6 +71,40 @@ a {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
+/* Titles */
+.section-title {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* Layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
 /* Logo and Navigatin Menu */
 .nav {
     display: flex;
@@ -126,5 +160,46 @@ nav ul li a {
 #hero {
     height: 720px;
     display: grid;
-    grid-template-colums: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: var(--primaryIconColor)
+}
+
+.hero-right img{
+    width: 70%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: right;
+}
+
+/* Services Section */
+#services {
+    background-color: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+}
+
+.services .pre-title {
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+}
+
+.service {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
 }

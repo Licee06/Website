@@ -69,6 +69,15 @@ html {
   height: 50%;
 }
 
+#biodata {
+  width: 500px;
+  height: 500px;
+  /* background-color: red; */
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+}
+
 .footer{
   background-color: green;
   display: flex;
